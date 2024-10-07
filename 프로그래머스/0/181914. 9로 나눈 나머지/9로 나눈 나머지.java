@@ -3,7 +3,7 @@ class Solution {
         int answer = 0;
         
         for(char x : number.toCharArray()){
-            answer += Integer.parseInt(x+"");
+            answer += Integer.parseInt(String.valueOf(x));
         }
         return answer % 9;
     }
