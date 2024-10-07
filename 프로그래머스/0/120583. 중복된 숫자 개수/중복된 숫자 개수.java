@@ -1,14 +1,10 @@
-import java.util.ArrayList;
-import java.util.Collections;
-
 class Solution {
     public int solution(int[] array, int n) {
-        ArrayList<Integer> list = new ArrayList<>();
+        int answer = 0;
         
         for(int num : array){
-            list.add(num);
+            answer += num == n ? 1 : 0;
         }
-        
-        return Collections.frequency(list, n);
+        return answer;
     }
 }
