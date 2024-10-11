@@ -1,10 +1,10 @@
 class Solution {
     public String solution(String phone_number) {
-        String replaceStr = "";
+        String answer = "";
         
         for(int i=0;i<phone_number.length()-4;i++)
-            replaceStr += "*";
+            answer += "*";
         
-        return phone_number.replace(phone_number.substring(0, phone_number.length()-4), replaceStr);
+        return answer+phone_number.substring(phone_number.length()-4);
     }
 }
