@@ -9,12 +9,7 @@ class Solution {
                 if(word.charAt(i) == ' '){
                     answer += " ";
                 }
-                else if(i%2==0){
-                    answer += Character.toUpperCase(word.charAt(i));
-                }
-                else{
-                    answer+= Character.toLowerCase(word.charAt(i));   
-                }
+                answer += i%2==0 ? Character.toUpperCase(word.charAt(i)) : Character.toLowerCase(word.charAt(i));   
             }
             answer += " ";
         }
