@@ -1,27 +1,13 @@
-import java.util.Arrays;
-
 class Solution {
     public int solution(String s) {
         int answer = 0;
-        String result = "";
         
         String[] numbers = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
         
-        String word = "";
-        
-        for(char c : s.toCharArray()){
-            if(Character.isDigit(c)){
-                result += c;
-            }
-            else{
-                word += c;
-                if(Arrays.asList(numbers).indexOf(word) > -1){
-                    result += Arrays.asList(numbers).indexOf(word);
-                    word = "";
-                }
-            }
+        for(int i=0;i<numbers.length;i++){
+            s = s.replaceAll(numbers[i], Integer.toString(i));
         }
-        answer = Integer.valueOf(result);
+        answer = Integer.parseInt(s);
         
         return answer;
     }
