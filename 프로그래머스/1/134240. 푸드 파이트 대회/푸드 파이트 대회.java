@@ -10,7 +10,8 @@ class Solution {
             }
         }
         StringBuilder sb = new StringBuilder(answer);
-        answer += "0"+sb.reverse();
+        
+        answer += "0" + sb.reverse().toString();
         
         return answer;
     }
