@@ -18,7 +18,7 @@ class Solution {
                 idx2++;
                 result = "Yes";
             }
-            if(result.equals("No")){
+            else{
                 return result;
             }
         }
